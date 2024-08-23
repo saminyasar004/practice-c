@@ -1,20 +1,41 @@
+#include <math.h>
 #include <stdio.h>
-#include <stdlib.h>
 
-int main()
-{
-  int testcase;
-  scanf("%d", &testcase);
-  int totalPrice = 100;
-  int results[testcase];
-  for (int i = 0; i < testcase; i++)
-  {
-    scanf("%ld", results[i]);
+// * no.3
+
+// int main() {
+//   int n;
+//   printf("Enter the value for n: ");
+//   scanf("%d", &n);
+
+//   int result = 0;
+
+//   for (int i = 1; i <= n; i++) {
+//     result += pow(i, i);
+//   }
+
+//   printf("result = %d\n", result);
+
+//   return 0;
+// }
+
+// * no.5
+
+int main() {
+  int n;
+  scanf("%d", &n);
+
+  long int result = 0;
+
+  for (int i = 1; i <= n; i++) {
+    if (n % 2 == 0) {
+      result -= i;
+    } else {
+      result += i;
+    }
   }
 
-  for (int i = 0; i < testcase; i++)
-  {
-    printf("%d\n", results[i]);
-  }
+  printf("result = %ld\n", result);
+
   return 0;
 }
